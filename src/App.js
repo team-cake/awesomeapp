@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "./components/Title";
+import Pokemon from "./components/Pokemon";
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <main>
       <Title content=`Some simple title` />
+      <Pokemon />
       </main>
       <header className="App-header">
         <p>Class #42 is the best!</p>
