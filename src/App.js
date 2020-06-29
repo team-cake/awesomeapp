@@ -15,6 +15,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
+          
         >
           Want to know more about Class #42?
         </a>
