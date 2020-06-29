@@ -17,7 +17,7 @@ function App() {
           rel="noopener noreferrer"
 
         >
-          Want to know more about Class #42 2020?
+          Wait what? Is Codaisseur the best in town?
         </a>
       </header>
     </div>
