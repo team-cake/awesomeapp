@@ -36,7 +36,6 @@ const all_pokemon = [
 function App() {
   return (
     <div>
-      
       <center>
         <main>
         <div className="card-body my-5"></div>
