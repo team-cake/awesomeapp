@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "./components/Title";
-import Pokemon from "./components/Pokemon";
+import Pokemon from "./components/Pokemon/Pokemon";
 
 const all_pokemon = [
   {
@@ -36,9 +36,12 @@ const all_pokemon = [
 function App() {
   return (
     <div>
+      
       <center>
         <main>
+        <div className="card-body my-5"></div>
           <Title content="Pokemon" />
+          <div className="card-body mb-4"></div>
           <div className="row">
         {all_pokemon.map(pokemon => (
           <div className="col-md-6 col-lg-4">

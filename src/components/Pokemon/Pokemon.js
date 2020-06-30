@@ -1,4 +1,6 @@
 import React from "react";
+import "./Pokemon.scss"
+
 
 export default function Pokemon({
   name,
@@ -8,13 +10,14 @@ export default function Pokemon({
   abilities,
 }) {
   return (
-    <div className="card">
-      <div className="card-body">
+    <div className="card shadow-sm mb-4">
+      <div className="card Pokemon">
+      <div className="card-body pb-0">
         <h5 className="card-title">{name}</h5>
-        <h6 className="card-subtitle">
+        <h6 className="card-subtitle mb-3 text-primary">
           {awesome ? "An awesome Pokemon" : "Not awesome"}
         </h6>
-        <p>
+        <p className="mb-0">
           Weight: {weight} kg
           <br />
           Terrifying: {terrifying ? "Very" : "nah, lovable"}
@@ -23,10 +26,11 @@ export default function Pokemon({
         </p>
       </div>
       <ul className="list-group list-group-flush">
-        {abilities.map(ability => {
+        {abilities.map((ability) => {
           return <li className="list-group-item">{ability}</li>;
         })}
       </ul>
+      </div>
     </div>
   );
 }
