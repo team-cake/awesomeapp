@@ -8,18 +8,25 @@ export default function Pokemon({
   abilities,
 }) {
   return (
-    <div>
-      <h2>Pokemon name: {name}</h2>
-      <p>Weight: {weight} kg</p>
-      <p>Awesome: {awesome ? "YES!" : "nope, not really"}</p>
-      <p>Terrifying: {terrifying ? "Very" : "nah, lovable"}</p>
-      <p>Abilities ({abilities.length}):</p>
-      <ul>
-        {abilities.map(abilities => {
-          return <li>{abilities}</li>
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">{name}</h5>
+        <h6 className="card-subtitle">
+          {awesome ? "An awesome Pokemon" : "Not awesome"}
+        </h6>
+        <p>
+          Weight: {weight} kg
+          <br />
+          Terrifying: {terrifying ? "Very" : "nah, lovable"}
+          <br />
+          {abilities.length} abilities
+        </p>
+      </div>
+      <ul className="list-group list-group-flush">
+        {abilities.map(ability => {
+          return <li className="list-group-item">{ability}</li>;
         })}
       </ul>
-
     </div>
   );
 }

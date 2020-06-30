@@ -39,34 +39,19 @@ function App() {
       <center>
         <main>
           <Title content="Pokemon" />
-          <Pokemon
-            name="Charizard"
-            weight="90"
-            awesome="yes"
-            terrifying="no"
-            abilities={["Blaze", "Solar power", "Tough claws", "Drought"]}
-          />
-          <Pokemon
-            name="Bulbasaur"
-            weight="6.9"
-            awesome="yes"
-            terrifying="no"
-            abilities={["Overgrow", "Chlorophyll"]}
-          />
-          <Pokemon
-            name="Mewtwo"
-            weight="112"
-            awesome="yes"
-            terrifying="yes"
-            abilities={["Pressure", "Unnerve", "Steadfast", "Insomnia"]}
-          />
-          <Pokemon
-            name="Mega beedrill"
-            weight="65"
-            awesome="no"
-            terrifying="yes"
-            abilities={["Intimidate", "Unnerve"]}
-          />
+          <div className="row">
+        {all_pokemon.map(pokemon => (
+          <div className="col-md-6 col-lg-4">
+            <Pokemon
+              name={pokemon.name}
+              weight={pokemon.weight}
+              awesome={pokemon.awesome}
+              terrifying={pokemon.terrifying}
+              abilities={pokemon.abilities}
+            />
+          </div>
+        ))}
+      </div>
         </main>
       </center>
     </div>
